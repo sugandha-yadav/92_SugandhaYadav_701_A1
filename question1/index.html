@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NodeJS AJAX Example</title>
+</head>
+
+<body>
+
+    <h2>NodeJS AJAX Example</h2>
+
+    <button onclick="getData()">Click Here</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+
+        function getData() {
+
+            fetch("/gethello")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("result").innerHTML = data;
+                });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
